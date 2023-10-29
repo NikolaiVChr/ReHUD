@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish ReHUD.csproj -c Release --output myOutput -r win-x64 -p:PublishTrimmed=true -p:PublishSingleFile=true --self-contained false
+      run: dotnet publish ReHUD.csproj -c Release --output myOutput -r win-x64 -p:PublishTrimmed=true -p:PublishSingleFile=true --self-contained true
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.3
       with:
